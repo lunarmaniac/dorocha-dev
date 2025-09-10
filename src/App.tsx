@@ -34,7 +34,7 @@ function App() {
                 <div className="transition-opacity duration-300 group-hover:opacity-0">
                   <h3 className="text-stone-400 font-semibold">silica</h3>
                   <p className="text-sm text-zinc-400">
-                    end-to-end encrypted chatroom built with next.js + web sockets. messages use 'AES-256-GCM' with 'PBKDF2'-derived keys ('SHA-256', 100k iterations) and fresh 96-bit IVs. rooms are secured by cryptographically strong 16-character access codes (~95 bits entropy).
+                    end-to-end encrypted chatroom built with next.js + web sockets. messages use 'AES-256-GCM' with 'PBKDF2'-derived keys ('SHA-256', 100k iterations) and fresh 96-bit iv(s). rooms are secured by cryptographically strong 16-character access codes (~95 bits entropy).
                   </p>
                 </div>
 
@@ -62,6 +62,22 @@ function App() {
                 </div>
               </div>
             </div>
+          </section>
+
+          {/* Blog */}
+          <section>
+            <h2 className="text-xl text-zinc-300 mb-3">blog</h2>
+            <p className="text-sm text-zinc-400 mb-3">
+              very random probably to be inactive blog with random musings.
+            </p>
+            <a
+              href="https://blog.dorocha.dev"
+              target="_blank"
+              rel="noopener noreferrer"
+              className=" border-zinc-800 hover:border-zinc-600 text-stone-400 transition"
+            >
+              click 2 visit
+            </a>
           </section>
 
           {/* Contact */}
