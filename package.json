@@ -1,7 +1,7 @@
 {
   "name": "dorocha-dev",
   "private": true,
-  "homepage": "https://lunarmaniac.github.io/dorocha-dev/",
+  "homepage": "https://dorochadev.github.io/dorocha-dev/",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
