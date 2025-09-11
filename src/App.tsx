@@ -51,7 +51,7 @@ function App() {
                     </a>
                     <span className="text-zinc-500">|</span>
                     <a
-                      href="https://github.com/dorocha/silica"
+                      href="https://github.com/dorochadev/silica"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="hover:underline"
@@ -87,7 +87,7 @@ function App() {
               <a href="mailto:me@dorocha.dev" className="hover:text-stone-400 transition">
                 <Mail className="w-5 h-5" />
               </a>
-              <a href="https://github.com/dorocha" className="hover:text-stone-400 transition">
+              <a href="https://github.com/dorochadev" className="hover:text-stone-400 transition">
                 <Github className="w-5 h-5" />
               </a>
             </div>
