@@ -6,15 +6,15 @@ function App() {
   return (
     <div className="min-h-screen w-full flex items-center justify-center bg-black "> 
       <div className="text-zinc-400 font-mono flex flex-col items-center p-6 w-full max-w-3xl">
-        {/* Header */}
+        {/* header */}
         <header className="w-full border-b border-zinc-800 pb-4 mb-8">
           <h1 className="text-3xl font-bold text-stone-400">dorocha.dev</h1>
           <p className="text-zinc-500 text-sm">software engineer • cyber security enthusiast</p>
         </header>
 
-        {/* Sections */}
+        {/* sections */}
         <main className="w-full space-y-16">
-          {/* About */}
+          {/* about */}
           <section>
             <h2 className="text-xl text-zinc-300 mb-2">about</h2>
             <p className="text-zinc-400 leading-relaxed">
@@ -23,14 +23,15 @@ function App() {
             </p>
           </section>
 
-          {/* Projects */}
+          {/* projects */}
           <section>
             <h2 className="text-xl text-zinc-300 mb-3">projects</h2>
             <p className="text-sm text-zinc-400 mb-3">while most of my projects are private, some are accessable.</p>
 
             <div className="grid gap-4">
+              {/* silica project */}
               <div className="relative group bg-zinc-950 border border-zinc-800 rounded-xl p-4 hover:border-zinc-600 transition">
-                {/* Default content */}
+                {/* default content */}
                 <div className="transition-opacity duration-300 group-hover:opacity-0">
                   <h3 className="text-stone-400 font-semibold">silica</h3>
                   <p className="text-sm text-zinc-400">
@@ -38,7 +39,7 @@ function App() {
                   </p>
                 </div>
 
-                {/* Links on hover */}
+                {/* links on hover */}
                 <div className="absolute inset-0 flex justify-center items-center opacity-0 transition-opacity duration-300 group-hover:opacity-100">
                   <div className="text-sm font-mono text-stone-400 space-x-2">
                     <a
@@ -61,10 +62,38 @@ function App() {
                   </div>
                 </div>
               </div>
+
+              {/* capes project */}
+              <div className="relative group bg-zinc-950 border border-zinc-800 rounded-xl p-4 hover:border-zinc-600 transition">
+                {/* default content */}
+                <div className="transition-opacity duration-300 group-hover:opacity-0">
+                  <h3 className="text-stone-400 font-semibold">capes</h3>
+                  <p className="text-sm text-zinc-400">
+                    a tiny cli tool to view minecraft player heads and equipped capes directly in your terminal. 
+                    it fetches data from <a href="https://capes.me" target="_blank" rel="noopener noreferrer" className="underline">capes.me</a> and 
+                    renders images inline using kitty's icat or chafa for portable terminals. features include caching, 
+                    configurable layout and display options, and support for usernames or uuids. {/* this is funny cuz they cant click the href anyway LOl */}
+                  </p>
+                </div>
+
+                {/* links on hover */}
+                <div className="absolute inset-0 flex justify-center items-center opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                  <div className="text-sm font-mono text-stone-400 space-x-2">
+                    <a
+                      href="https://github.com/dorochadev/capes"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:underline"
+                    >
+                      Source
+                    </a>
+                  </div>
+                </div>
+              </div>
             </div>
           </section>
 
-          {/* Blog */}
+          {/* blog */}
           <section>
             <h2 className="text-xl text-zinc-300 mb-3">blog</h2>
             <p className="text-sm text-zinc-400 mb-3">
@@ -80,13 +109,18 @@ function App() {
             </a>
           </section>
 
-          {/* Contact */}
+          {/* contact */}
           <section>
             <h2 className="text-xl text-zinc-300 mb-4">contact</h2>
-            <div className="flex space-x-4">
-              <a href="mailto:me@dorocha.dev" className="hover:text-stone-400 transition">
-                <Mail className="w-5 h-5" />
-              </a>
+            <div className="flex space-x-4 items-center">
+              <div className="relative group cursor-pointer" onClick={() => navigator.clipboard.writeText("me@dorocha.dev")}>
+                <Mail className="w-5 h-5 hover:text-stone-400 transition" />
+                {/* tooltip */}
+                <div className="absolute bottom-full mb-2 left-1/2 transform -translate-x-1/2 px-2 py-1 bg-zinc-900 text-xs text-zinc-300 rounded opacity-0 group-hover:opacity-100 transition-opacity">
+                  click to copy:
+                  me@dorocha.dev
+                </div>
+              </div>
               <a href="https://github.com/dorochadev" className="hover:text-stone-400 transition">
                 <Github className="w-5 h-5" />
               </a>
@@ -94,7 +128,7 @@ function App() {
           </section>
         </main>
 
-        {/* Footer */}
+        {/* footer */}
         <footer className="mt-16 text-xs text-zinc-500">
           © {new Date().getFullYear()} dorocha.dev
         </footer>
