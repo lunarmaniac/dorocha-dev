@@ -13,7 +13,7 @@ function App() {
         </header>
 
         {/* sections */}
-        <main className="w-full space-y-16">
+        <main className="w-full space-y-8">
           {/* about */}
           <section>
             <h2 className="text-xl text-zinc-300 mb-2">about</h2>
